@@ -235,7 +235,7 @@ const BuyNowCheckout = () => {
   return (
     <>
       <Header />
-      <div className="min-h-screen bg-[#fefaf9] py-8 px-4 sm:px-6 lg:px-8">
+      <div className="min-h-screen bg-[#FFBF78] py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Breadcrumbs */}
           <nav className="flex mb-8" aria-label="Breadcrumb">
@@ -427,8 +427,8 @@ const BuyNowCheckout = () => {
                     Please send the total amount of PKR {total.toLocaleString()} to our EasyPaisa account:
                   </p>
                   <ul className="list-disc list-inside text-gray-800 mb-4 text-sm sm:text-base">
-                    <li><strong>Account Name:</strong> Maham </li>
-                    <li><strong>EasyPaisa Number:</strong> 03105816903</li>
+                    <li><strong>Account Name:</strong> Umeal Wara </li>
+                    <li><strong>EasyPaisa Number:</strong> 0315-0101234</li>
                   </ul>
                   <p className="text-gray-700 mb-4 text-sm sm:text-base">
                     After making the payment, please upload a screenshot of the transaction as proof of payment.

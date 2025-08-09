@@ -234,7 +234,7 @@ const CheckoutPage = () => {
   return (
     <>
       <Header />
-      <div className="min-h-screen bg-[#FFF5EE] py-8 px-4 sm:px-6 lg:px-8">
+      <div className="min-h-screen bg-[#FFBF78] py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Breadcrumbs */}
           <nav className="flex mb-8" aria-label="Breadcrumb">
@@ -405,8 +405,8 @@ const CheckoutPage = () => {
                     Please transfer the total amount of PKR {total.toLocaleString()} to our EasyPaisa account:
                   </p>
                   <ul className="list-disc list-inside text-gray-800 text-sm sm:text-base mb-4">
-                     <li><strong>Account Name:</strong> Maham </li>
-                    <li><strong>EasyPaisa Number:</strong> 03105816903</li>
+                     <li><strong>Account Name:</strong> Umeal Wara </li>
+                    <li><strong>EasyPaisa Number:</strong> 0315-0101234</li>
                   </ul>
                   <p className="text-gray-700 text-sm sm:text-base mb-4">
                     After making the transfer, please upload a screenshot of the transaction as proof of payment.
