@@ -16,6 +16,7 @@ const CheckoutPage = () => {
   const navigate = useNavigate();
 
   const [cartItems, setCartItems] = useState([]);
+
   const [form, setForm] = useState({
     email: '',
     fullName: '',
@@ -70,7 +71,15 @@ const CheckoutPage = () => {
   }, []);
 
   const subtotal = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
-  const shippingCost = 230;
+  
+  // Dynamic shipping cost based on city
+  const getShippingCost = () => {
+    if (!form.city) return 0; // No cost if city not selected
+    const city = form.city.toLowerCase().trim();
+    return city === 'karachi' ? 200 : 250;
+  };
+  
+  const shippingCost = getShippingCost();
   const total = subtotal + shippingCost;
 
   const handleChange = (e) => {
@@ -314,9 +323,16 @@ const CheckoutPage = () => {
                       name="city"
                       value={form.city}
                       onChange={handleChange}
+                      placeholder="e.g., Karachi, Lahore, Islamabad"
                       className={`w-full px-4 py-2 border ${errors.city ? 'border-red-500' : 'border-gray-300'} rounded-md focus:ring-black focus:border-black`}
                     />
                     {errors.city && <p className="mt-1 text-sm text-red-600">{errors.city}</p>}
+                    {form.city && (
+                      <p className="mt-1 text-xs text-gray-600">
+                        Delivery charge: PKR {getShippingCost()} 
+                        {form.city.toLowerCase().trim() === 'karachi' ? ' (Karachi rate)' : ' (Outside Karachi)'}
+                      </p>
+                    )}
                   </div>
 
                   <div>
@@ -374,7 +390,12 @@ const CheckoutPage = () => {
                   <div className="ml-3">
                     <p className="font-medium text-gray-900">Standard Delivery</p>
                     <p className="text-sm text-gray-500">
-                      PKR 230 - Delivery in 4-5 business days
+                      PKR {shippingCost > 0 ? shippingCost : 'TBD'} - Delivery in 4-5 business days
+                      {form.city && shippingCost > 0 && (
+                        <span className="block text-xs mt-1">
+                          ({form.city.toLowerCase().trim() === 'karachi' ? 'Karachi: PKR 200' : 'Outside Karachi: PKR 250'})
+                        </span>
+                      )}
                     </p>
                   </div>
                 </label>
@@ -521,7 +542,9 @@ const CheckoutPage = () => {
 
                 <div className="flex justify-between">
                   <span className="text-sm text-gray-600">Shipping</span>
-                  <span className="text-sm">PKR {shippingCost.toLocaleString()}</span>
+                  <span className="text-sm">
+                    {shippingCost > 0 ? `PKR ${shippingCost.toLocaleString()}` : 'TBD'}
+                  </span>
                 </div>
 
                 {form.promoCode && (
@@ -534,13 +557,15 @@ const CheckoutPage = () => {
 
               <div className="flex justify-between mt-4 pt-4 border-t border-gray-200">
                 <span className="font-medium text-base sm:text-lg">Total</span>
-                <span className="font-bold text-base sm:text-lg">PKR {total.toLocaleString()}</span>
+                <span className="font-bold text-base sm:text-lg">
+                  {shippingCost > 0 ? `PKR ${total.toLocaleString()}` : `PKR ${subtotal.toLocaleString()} + Shipping`}
+                </span>
               </div>
 
               <button
                 onClick={placeOrder}
-                disabled={loading || cartItems.length === 0 || convertingImage}
-                className={`mt-6 w-full py-3 px-4 rounded-md font-medium text-base ${loading || cartItems.length === 0 || convertingImage ? 'bg-gray-400 cursor-not-allowed' : 'bg-black text-white hover:bg-gray-800'} transition`}
+                disabled={loading || cartItems.length === 0 || convertingImage || shippingCost === 0}
+                className={`mt-6 w-full py-3 px-4 rounded-md font-medium text-base ${loading || cartItems.length === 0 || convertingImage || shippingCost === 0 ? 'bg-gray-400 cursor-not-allowed' : 'bg-black text-white hover:bg-gray-800'} transition`}
               >
                 {loading || convertingImage ? (
                   <span className="flex items-center justify-center">
@@ -552,6 +577,8 @@ const CheckoutPage = () => {
                   </span>
                 ) : cartItems.length === 0 ? (
                   'Your Cart is Empty'
+                ) : shippingCost === 0 ? (
+                  'Enter City for Shipping Cost'
                 ) : (
                   'Place Order'
                 )}
@@ -559,7 +586,6 @@ const CheckoutPage = () => {
 
               <div className="mt-6 text-center text-xs sm:text-sm text-gray-500">
                 <p>100% secure checkout</p>
-
               </div>
             </div>
           </div>
