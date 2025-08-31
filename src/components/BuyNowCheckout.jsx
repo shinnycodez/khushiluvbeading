@@ -18,7 +18,7 @@ const BuyNowCheckout = () => {
     region: '',
     country: '',
     shippingMethod: 'Standard Delivery',
-    paymentMethod: 'EasyPaisa', // Default to EasyPaisa, will add COD option
+    paymentMethod: 'Nayapay', // Default to Nayapay, will add COD option
     promoCode: '',
     notes: '',
   });
@@ -70,8 +70,8 @@ const BuyNowCheckout = () => {
       setErrors(prev => ({ ...prev, [name]: '' }));
     }
     
-    // Clear the Base64 string if payment method changes from EasyPaisa
-    if (name === 'paymentMethod' && value !== 'EasyPaisa') {
+    // Clear the Base64 string if payment method changes from Nayapay
+    if (name === 'paymentMethod' && value !== 'Nayapay') {
       setBankTransferProofBase64(null);
       setErrors(prev => ({ ...prev, bankTransferProof: '' }));
     }
@@ -129,8 +129,8 @@ const BuyNowCheckout = () => {
       newErrors.phone = 'Please enter a valid phone number (at least 7 digits)';
     }
 
-    if (form.paymentMethod === 'EasyPaisa' && !bankTransferProofBase64) {
-      newErrors.bankTransferProof = 'Please upload a screenshot of your EasyPaisa transaction.';
+    if (form.paymentMethod === 'Nayapay' && !bankTransferProofBase64) {
+      newErrors.bankTransferProof = 'Please upload a screenshot of your Nayapay transaction.';
     }
 
     setErrors(newErrors);
@@ -191,7 +191,7 @@ const BuyNowCheckout = () => {
       createdAt: new Date(),
       status: 'processing',
       buyNow: true,
-      bankTransferProofBase64: form.paymentMethod === 'EasyPaisa' ? bankTransferProofBase64 : null,
+      bankTransferProofBase64: form.paymentMethod === 'Nayapay' ? bankTransferProofBase64 : null,
     };
 
     try {
@@ -413,17 +413,17 @@ const BuyNowCheckout = () => {
               <h2 className="text-lg sm:text-xl font-semibold mt-8 mb-6 pb-2 border-b">Payment Method</h2>
               
               <div className="space-y-4">
-                {/* EasyPaisa Option */}
+                {/* Nayapay Option */}
                 <label className="flex items-center p-4 border rounded-md hover:border-black cursor-pointer">
                   <input
                     type="radio"
                     name="paymentMethod"
-                    value="EasyPaisa"
-                    checked={form.paymentMethod === 'EasyPaisa'}
+                    value="Nayapay"
+                    checked={form.paymentMethod === 'Nayapay'}
                     onChange={handleChange}
                     className="h-4 w-4 text-black focus:ring-black border-gray-300"
                   />
-                  <span className="ml-3 font-medium text-gray-900 text-sm sm:text-base">EasyPaisa</span>
+                  <span className="ml-3 font-medium text-gray-900 text-sm sm:text-base">Nayapay</span>
                 </label>
 
                 {/* Cash on Delivery (COD) Option */}
@@ -440,22 +440,23 @@ const BuyNowCheckout = () => {
                 </label> */}
               </div>
 
-              {form.paymentMethod === 'EasyPaisa' && (
+              {form.paymentMethod === 'Nayapay' && (
                 <div className="mt-6 p-4 border border-blue-300 bg-blue-50 rounded-md">
-                  <h3 className="text-base sm:text-lg font-semibold mb-3">EasyPaisa Payment Details</h3>
+                  <h3 className="text-base sm:text-lg font-semibold mb-3">Nayapay Payment Details</h3>
                   <p className="text-gray-700 mb-4 text-sm sm:text-base">
-                    Please send the total amount of PKR {total.toLocaleString()} to our EasyPaisa account:
+                    Please send the total amount of PKR {total.toLocaleString()} to our Nayapay account:
                   </p>
                   <ul className="list-disc list-inside text-gray-800 mb-4 text-sm sm:text-base">
-                    <li><strong>Account Name:</strong> Umeal Wara </li>
-                    <li><strong>EasyPaisa Number:</strong> 0315-0101234</li>
+                    <li><strong>Id:</strong> Umulwara </li>
+                    <li><strong>Nayapay Number:</strong> 03150101234</li>
+                    <li><strong>IBAN</strong>PK51NAYA1234503150101234</li>
                   </ul>
                   <p className="text-gray-700 mb-4 text-sm sm:text-base">
                     After making the payment, please upload a screenshot of the transaction as proof of payment.
                   </p>
                   <div>
                     <label htmlFor="bankTransferProof" className="block text-sm font-medium text-gray-700 mb-1">
-                      Upload EasyPaisa Transaction Screenshot*
+                      Upload Nayapay Transaction Screenshot*
                     </label>
                     <input
                       id="bankTransferProof"

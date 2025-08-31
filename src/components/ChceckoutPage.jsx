@@ -27,7 +27,7 @@ const CheckoutPage = () => {
     region: '',
     country: '',
     shippingMethod: 'Standard Delivery',
-    paymentMethod: 'EasyPaisa',
+    paymentMethod: 'Nayapay',
     promoCode: '',
     notes: '',
   });
@@ -91,8 +91,8 @@ const CheckoutPage = () => {
     if (errors[name]) {
       setErrors(prev => ({ ...prev, [name]: '' }));
     }
-    // Clear the Base64 string if payment method changes from EasyPaisa
-    if (name === 'paymentMethod' && value !== 'EasyPaisa') {
+    // Clear the Base64 string if payment method changes from Nayapay
+    if (name === 'paymentMethod' && value !== 'Nayapay') {
       setBankTransferProofBase64(null);
     }
   };
@@ -134,8 +134,8 @@ const CheckoutPage = () => {
       newErrors.email = 'Please enter a valid email address';
     }
 
-    if (form.paymentMethod === 'EasyPaisa' && !bankTransferProofBase64) {
-      newErrors.bankTransferProof = 'Please upload a screenshot of your EasyPaisa transfer.';
+    if (form.paymentMethod === 'Nayapay' && !bankTransferProofBase64) {
+      newErrors.bankTransferProof = 'Please upload a screenshot of your Nayapay transfer.';
     }
 
     setErrors(newErrors);
@@ -191,7 +191,7 @@ const CheckoutPage = () => {
       total,
       createdAt: new Date(),
       status: 'processing',
-      bankTransferProofBase64: form.paymentMethod === 'EasyPaisa' ? bankTransferProofBase64 : null,
+      bankTransferProofBase64: form.paymentMethod === 'Nayapay' ? bankTransferProofBase64 : null,
     };
 
     try {
@@ -404,7 +404,7 @@ const CheckoutPage = () => {
               <h2 className="text-lg sm:text-xl font-semibold mt-8 mb-6 pb-2 border-b">Payment Method</h2>
 
               <div className="space-y-4">
-                {['EasyPaisa'].map(method => (
+                {['Nayapay'].map(method => (
                   <label key={method} className="flex items-center p-4 border rounded-md hover:border-black cursor-pointer">
                     <input
                       type="radio"
@@ -419,22 +419,23 @@ const CheckoutPage = () => {
                 ))}
               </div>
 
-              {form.paymentMethod === 'EasyPaisa' && (
+              {form.paymentMethod === 'Nayapay' && (
                 <div className="mt-6 p-4 border border-blue-300 bg-blue-50 rounded-md">
-                  <h3 className="text-base sm:text-lg font-semibold mb-3">EasyPaisa Transfer Details</h3>
+                  <h3 className="text-base sm:text-lg font-semibold mb-3">Nayapay Transfer Details</h3>
                   <p className="text-gray-700 text-sm sm:text-base mb-4">
-                    Please transfer the total amount of PKR {total.toLocaleString()} to our EasyPaisa account:
+                    Please transfer the total amount of PKR {total.toLocaleString()} to our Nayapay account:
                   </p>
                   <ul className="list-disc list-inside text-gray-800 text-sm sm:text-base mb-4">
-                     <li><strong>Account Name:</strong> Umeal Wara </li>
-                    <li><strong>EasyPaisa Number:</strong> 0315-0101234</li>
+                    <li><strong>Id:</strong> Umulwara </li>
+                    <li><strong>Nayapay Number:</strong> 03150101234</li>
+                    <li><strong>IBAN</strong>PK51NAYA1234503150101234</li>
                   </ul>
                   <p className="text-gray-700 text-sm sm:text-base mb-4">
                     After making the transfer, please upload a screenshot of the transaction as proof of payment.
                   </p>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Upload EasyPaisa Transfer Screenshot*
+                      Upload Nayapay Transfer Screenshot*
                     </label>
                     <input
                       type="file"
