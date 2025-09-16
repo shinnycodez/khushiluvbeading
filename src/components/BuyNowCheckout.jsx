@@ -243,7 +243,7 @@ const BuyNowCheckout = () => {
   return (
     <>
       <Header />
-      <div className="min-h-screen bg-[#FFBF78] py-8 px-4 sm:px-6 lg:px-8">
+      <div className="min-h-screen bg-[#F5D2D2] py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Breadcrumbs */}
           <nav className="flex mb-8" aria-label="Breadcrumb">

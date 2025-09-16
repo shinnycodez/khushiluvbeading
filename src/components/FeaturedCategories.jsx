@@ -2,6 +2,24 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const categories = [
+        {
+    id: 2,
+    title: "Glass Beaded Bracelet ˚⋆𐙚｡",
+    imageUrl: "https://pbs.twimg.com/media/G0-2GpqXUAAC5im?format=png&name=small",
+      link: "Glass Beaded Bracelet"
+  },
+              {
+    id: 5,
+    title: "Crystal Bead Bracelet ⋆⭒˚.⋆",
+    imageUrl:"https://pbs.twimg.com/media/G0-195vW4AEytv5?format=png&name=900x900",
+     link: "Crystal Bead Bracelet"
+  },
+              {
+    id: 5,
+    title: "Phone Charms ⋆⭒˚.⋆",
+    imageUrl:"https://pbs.twimg.com/media/G0-04_WWkAAMlI7?format=png&name=small",
+     link: "Phone Charms"
+  },
     {
     id: 3,
     title: "Uncut sticker sheet ˚⊹♡",
@@ -10,94 +28,72 @@ const categories = [
   },
   {
     id: 1,
-    title: "Handmade Earrings ⋆｡𖦹°",
-    imageUrl: "https://pbs.twimg.com/media/GzshpdYWsAAqR-H?format=png&name=small",
-      link: "Handmade Earrings",
+    title: "Earrings ⋆｡𖦹°",
+    imageUrl: "https://pbs.twimg.com/media/G0-07i8XkAAX8Hv?format=png&name=small",
+      link: "Earrings",
   },
 
       {
-    id: 2,
-    title: "Glass Beaded Bracelet ˚⋆𐙚｡",
-    imageUrl: "https://pbs.twimg.com/media/GzshygZXkAE-yfa?format=png&name=small",
-      link: "Glass Beaded Bracelet"
-  },
-      {
     id: 5,
     title: "Keychains ｡°✩",
-    imageUrl:"https://pbs.twimg.com/media/Gzshz4LWAAAj6mB?format=png&name=small",
+    imageUrl:"https://pbs.twimg.com/media/G0-29WqX0AACXoT?format=png&name=small",
      link: "Keychains"
   },
         {
     id: 5,
     title: "Necklaces ⋆⭒˚.⋆",
-    imageUrl:"https://pbs.twimg.com/media/GzsiTTGWQAE28GI?format=png&name=small",
+    imageUrl:"https://pbs.twimg.com/media/G0-2EG-WkAACz0v?format=png&name=small",
      link: "Necklaces"
   },
         {
     id: 5,
-    title: "Under 550  Bracelets ⋆⭒˚.⋆",
-    imageUrl:"https://pbs.twimg.com/media/GzsiZPRWAAEBu9C?format=png&name=small",
-     link: "Under 550 Bracelets"
+    title: "Bracelets ⋆⭒˚.⋆",
+    imageUrl:"https://pbs.twimg.com/media/G0-037vW0AATSqE?format=png&name=small",
+     link: "Bracelets"
   },
           {
     id: 5,
-    title: "Beaded bracelets ⋆⭒˚.⋆",
-    imageUrl:"https://pbs.twimg.com/media/GzsieEJWEAA70gk?format=png&name=small",
-     link: "Beaded bracelets"
+    title: "Scrunchies ⋆⭒˚.⋆",
+    imageUrl:"https://pbs.twimg.com/media/G0-06ZTW4AAFbXB?format=png&name=900x900",
+     link: "Scrunchies"
   },
-            {
-    id: 5,
-    title: "Phone Charms ⋆⭒˚.⋆",
-    imageUrl:"https://pbs.twimg.com/media/GzsijyJW8AAuXMa?format=png&name=small",
-     link: "Phone Charms"
-  },
-            {
-    id: 5,
-    title: "Under 800 bracelets ⋆⭒˚.⋆",
-    imageUrl:"https://pbs.twimg.com/media/Gzsi9DDW0AAy5dr?format=png&name=small",
-     link: "Under 800 bracelets"
-  },
-              {
-    id: 5,
-    title: "Clay Bead Bracelets ⋆⭒˚.⋆",
-    imageUrl:"https://pbs.twimg.com/media/GzsjEeoWoAAWKqA?format=png&name=small",
-     link: "Clay Bead Bracelets"
-  },
+
+
+  //             {
+  //   id: 5,
+  //   title: "Clay Bead Bracelets ⋆⭒˚.⋆",
+  //   imageUrl:"https://pbs.twimg.com/media/GzsjEeoWoAAWKqA?format=png&name=small",
+  //    link: "Clay Bead Bracelets"
+  // },
                 {
     id: 5,
-    title: "Charm Earrings ⋆⭒˚.⋆",
-    imageUrl:"https://pbs.twimg.com/media/GzsjMBgWYAAMUSV?format=png&name=small",
-     link: "Charm Earrings"
+    title: "Charm Pendants ⋆⭒˚.⋆",
+    imageUrl:"https://pbs.twimg.com/media/G0-2ARbWkAAihM7?format=png&name=small",
+     link: "Charm Pendants"
   },
-                  {
-    id: 5,
-    title: "Pair Bracelets ⋆⭒˚.⋆",
-    imageUrl:"https://pbs.twimg.com/media/GzsjQJPXAAAgBE0?format=png&name=900x900",
-     link: "Pair Bracelets"
-  },
+  //                 {
+  //   id: 5,
+  //   title: "Pair Bracelets ⋆⭒˚.⋆",
+  //   imageUrl:"https://pbs.twimg.com/media/GzsjQJPXAAAgBE0?format=png&name=900x900",
+  //    link: "Pair Bracelets"
+  // },
                     {
     id: 5,
-    title: "Y2K ⋆⭒˚.⋆",
-    imageUrl:"https://pbs.twimg.com/media/GzsjsPmXIAAULvd?format=jpg&name=small",
-     link: "Y2K"
+    title: "Rings ⋆⭒˚.⋆",
+    imageUrl:"https://pbs.twimg.com/media/G0-2-ZpWYAA6ss4?format=png&name=small",
+     link: "Rings"
   },
                      {
     id: 5,
     title: "Stainless Steel ⋆⭒˚.⋆",
-    imageUrl:"https://pbs.twimg.com/media/Gzsjv3YXkAAtoO6?format=png&name=small",
+    imageUrl:"https://pbs.twimg.com/media/G0-3BTLXYAAHD1C?format=png&name=small",
      link: "Stainless Steel"
   },
                     {
     id: 5,
-    title: "Chokers ⋆⭒˚.⋆",
-    imageUrl:"https://pbs.twimg.com/media/Gzsjzf2WsAAXRvR?format=png&name=small",
-     link: "Chokers "
-  },
-                    {
-    id: 5,
-    title: "Charm Pendants ⋆⭒˚.⋆",
-    imageUrl:"https://pbs.twimg.com/media/Gzsj6aDWQAAizfg?format=png&name=small",
-     link: "Charm Pendants"
+    title: "Pouches ⋆⭒˚.⋆",
+    imageUrl:"https://pbs.twimg.com/media/G0-2_qiWAAA_C2X?format=png&name=small",
+     link: "Pouches "
   },
 ];
 
