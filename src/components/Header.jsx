@@ -47,7 +47,7 @@ const Header = () => {
             <Link to="/products?category=Keychains" className="text-[#141414] text-sm font-medium transition">Keychains ｡°✩</Link>
             <Link to="/products?category=Phone Charms" className="text-[#141414] text-sm font-medium  transition">
 Phone Charms ⋆｡𖦹°</Link>
-            <Link to="/products?category=Y2K" className="text-[#141414] text-sm font-medium  transition">Rings ˚⋆𐙚｡</Link>
+            <Link to="/products?category=Rings" className="text-[#141414] text-sm font-medium  transition">Rings ˚⋆𐙚｡</Link>
             <Link to="/products?category=Necklaces" className="text-[#141414] text-sm font-medium  transition">Necklaces ˚⋆𐙚｡</Link>
             {adminEmails.includes(user?.email) && (
               <Link to="/admin" className="text-[#141414] text-sm font-medium hover:text-[#0c77f2] transition">Admin</Link>
