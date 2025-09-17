@@ -45,8 +45,8 @@ const Header = () => {
           <div className="hidden md:flex items-center gap-5 lg:gap-9">
             <Link to="/" className="text-[#141414] text-sm font-medium transition">Home</Link>
             <Link to="/products?category=Keychains" className="text-[#141414] text-sm font-medium transition">Keychains ｡°✩</Link>
-            <Link to="/products?category=Phone charms" className="text-[#141414] text-sm font-medium  transition">
-Phone charms ⋆｡𖦹°</Link>
+            <Link to="/products?category=Phone Charms" className="text-[#141414] text-sm font-medium  transition">
+Phone Charms ⋆｡𖦹°</Link>
             <Link to="/products?category=Y2K" className="text-[#141414] text-sm font-medium  transition">Rings ˚⋆𐙚｡</Link>
             <Link to="/products?category=Necklaces" className="text-[#141414] text-sm font-medium  transition">Necklaces ˚⋆𐙚｡</Link>
             {adminEmails.includes(user?.email) && (
@@ -141,7 +141,7 @@ Phone charms ⋆｡𖦹°</Link>
               </div>
 
               <Link to="/products?category=Rings" onClick={() => setIsMenuOpen(false)} className="block px-4 py-3 hover:bg-[#FFE9DD] rounded-lg transition">Rings ˚⊹♡</Link>
-              <Link to="/products?category=Phone charms" onClick={() => setIsMenuOpen(false)} className="blocsk px-4 py-3 hover:bg-[#FFE9DD] rounded-lg transition">Phone charms ⋆｡𖦹°
+              <Link to="/products?category=Phone Charms" onClick={() => setIsMenuOpen(false)} className="blocsk px-4 py-3 hover:bg-[#FFE9DD] rounded-lg transition">Phone Charms ⋆｡𖦹°
 </Link>
               <Link to="/products?category=Keychains" onClick={() => setIsMenuOpen(false)} className="block px-4 py-3 hover:bg-[#FFE9DD] rounded-lg transition">
 Keychains ˚⋆𐙚｡

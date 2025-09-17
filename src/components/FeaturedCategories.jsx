@@ -15,7 +15,7 @@ const categories = [
      link: "Crystal Bead Bracelet"
   },
               {
-    id: 5,
+    id: 6,
     title: "Phone Charms ⋆⭒˚.⋆",
     imageUrl:"https://pbs.twimg.com/media/G0-04_WWkAAMlI7?format=png&name=small",
      link: "Phone Charms"
@@ -93,7 +93,7 @@ const categories = [
     id: 5,
     title: "Pouches ⋆⭒˚.⋆",
     imageUrl:"https://pbs.twimg.com/media/G0-2_qiWAAA_C2X?format=png&name=small",
-     link: "Pouches "
+     link: "Pouches"
   },
 ];
 
