@@ -10,25 +10,25 @@ import { AiOutlineClose } from 'react-icons/ai';
 
 function Products() {
   const [filters, setFilters] = useState({});
-  const [allProducts, setAllProducts] = useState([]);
+  // const [allProducts, setAllProducts] = useState([]);
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const querySnapshot = await getDocs(collection(db, 'products'));
-        const productList = querySnapshot.docs.map((doc) => ({
-          id: doc.id,
-          ...doc.data(),
-        }));
-        setAllProducts(productList);
-      } catch (error) {
-        console.error('Error fetching products:', error);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchProducts = async () => {
+  //     try {
+  //       const querySnapshot = await getDocs(collection(db, 'products'));
+  //       const productList = querySnapshot.docs.map((doc) => ({
+  //         id: doc.id,
+  //         ...doc.data(),
+  //       }));
+  //       setAllProducts(productList);
+  //     } catch (error) {
+  //       console.error('Error fetching products:', error);
+  //     }
+  //   };
 
-    fetchProducts();
-  }, []);
+  //   fetchProducts();
+  // }, []);
 
   return (
     <div
@@ -73,7 +73,7 @@ function Products() {
               </div>
             )}
 
-            <ProductGrid products={allProducts} filters={filters} />
+          <ProductGrid filters={filters} />
             {/* <Footer /> */}
           </div>
         </div>
