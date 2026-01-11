@@ -2,7 +2,20 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const categories = [
-        {
+
+  {
+    id: 5,
+    title: "Bracelets ⋆⭒˚.⋆",
+    imageUrl:"https://pbs.twimg.com/media/G-YYBNTbwAAupmb?format=jpg&name=large",
+     link: "Bracelets"
+  },
+                          {
+    id: 5,
+    title: "Stainless Steel Bracelet ⋆⭒˚.⋆",
+    imageUrl:"https://pbs.twimg.com/media/G-YcfNraAAA7NMb?format=png&name=small",
+     link: "Stainless Steel Bracelet"
+  },
+                        {
     id: 2,
     title: "More Bracelets ˚⋆𐙚｡",
     imageUrl: "https://pbs.twimg.com/media/G-YYD6JbsAAwauq?format=jpg&name=large",
@@ -20,12 +33,7 @@ const categories = [
     imageUrl:"https://pbs.twimg.com/media/G-YYPzhbkAAMcTN?format=jpg&name=large",
      link: "Phone Charms"
   },
-    {
-    id: 3,
-    title: "Uncut sticker sheet ˚⊹♡",
-    imageUrl: "https://pbs.twimg.com/media/GzshmF6WoAADD-b?format=png&name=small",
-    link: "Uncut sticker sheet"
-  },
+
   {
     id: 1,
     title: "Earrings ⋆｡𖦹°",
@@ -62,12 +70,7 @@ const categories = [
     imageUrl:"https://pbs.twimg.com/media/G-YazezaYAAJIi0?format=jpg&name=small",
      link: "Stainless Stell Necklaces"
   },
-        {
-    id: 5,
-    title: "Bracelets ⋆⭒˚.⋆",
-    imageUrl:"https://pbs.twimg.com/media/G-YYBNTbwAAupmb?format=jpg&name=large",
-     link: "Bracelets"
-  },
+
           {
     id: 5,
     title: "Scrunchies ⋆⭒˚.⋆",
@@ -88,6 +91,7 @@ const categories = [
     imageUrl:"https://pbs.twimg.com/media/G0-2ARbWkAAihM7?format=png&name=small",
      link: "Charm Pendants"
   },
+
   //                 {
   //   id: 5,
   //   title: "Pair Bracelets ⋆⭒˚.⋆",
@@ -100,24 +104,14 @@ const categories = [
     imageUrl:"https://pbs.twimg.com/media/G0-2-ZpWYAA6ss4?format=png&name=small",
      link: "Rings"
   },
-  {
-    id: 5,
-    title: "Handmade Rings ⋆⭒˚.⋆",
-    imageUrl:"https://pbs.twimg.com/media/G0-2-ZpWYAA6ss4?format=png&name=small",
-     link: "Handmade Rings"
-  },
+
           {
     id: 5,
     title: "Stainless Steel Anklet ⋆⭒˚.⋆",
     imageUrl:"https://pbs.twimg.com/media/G-YcRhXa8AASFgB?format=jpg&name=small",
      link: "Stainless Steel Anklet"
   },
-                  {
-    id: 5,
-    title: "Stainless Steel Bracelet ⋆⭒˚.⋆",
-    imageUrl:"https://pbs.twimg.com/media/G-YcfNraAAA7NMb?format=png&name=small",
-     link: "Stainless Steel Bracelet"
-  },
+
     {
     id: 5,
     title: "Stainless Steel Handcuffs ⋆⭒˚.⋆",
@@ -129,6 +123,12 @@ const categories = [
     title: "Thrifted Stuff ⋆⭒˚.⋆",
     imageUrl:"https://pbs.twimg.com/media/G-YcjGLbgAAH76_?format=jpg&name=large",
      link: "Thrifted Stuff"
+  },
+          {
+    id: 5,
+    title: "Handmade Rings ⋆⭒˚.⋆",
+    imageUrl:"https://pbs.twimg.com/media/G0-2-ZpWYAA6ss4?format=png&name=small",
+     link: "Handmade Rings"
   },
         
                      {
@@ -148,6 +148,12 @@ const categories = [
     title: "Plushies ⋆⭒˚.⋆",
     imageUrl:"https://pbs.twimg.com/media/G-YbLBqaUAAaLlj?format=png&name=small",
      link: "Plushies"
+  },
+ {
+    id: 3,
+    title: "Uncut sticker sheet ˚⊹♡",
+    imageUrl: "https://pbs.twimg.com/media/GzshmF6WoAADD-b?format=png&name=small",
+    link: "Uncut sticker sheet"
   },
 ];
 
