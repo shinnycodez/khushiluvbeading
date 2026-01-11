@@ -21,12 +21,7 @@ const categories = [
     imageUrl: "https://pbs.twimg.com/media/G-YYD6JbsAAwauq?format=jpg&name=large",
       link: "More Braceletst"
   },
-              {
-    id: 5,
-    title: "Crystal Bead Bracelet ⋆⭒˚.⋆",
-    imageUrl:"https://pbs.twimg.com/media/G0-195vW4AEytv5?format=png&name=900x900",
-     link: "Crystal Bead Bracelet"
-  },
+
               {
     id: 6,
     title: "Phone Charms ⋆⭒˚.⋆",
@@ -71,12 +66,7 @@ const categories = [
      link: "Stainless Stell Necklaces"
   },
 
-          {
-    id: 5,
-    title: "Scrunchies ⋆⭒˚.⋆",
-    imageUrl:"https://pbs.twimg.com/media/G0-06ZTW4AAFbXB?format=png&name=900x900",
-     link: "Scrunchies"
-  },
+
 
 
   //             {
@@ -124,19 +114,9 @@ const categories = [
     imageUrl:"https://pbs.twimg.com/media/G-YcjGLbgAAH76_?format=jpg&name=large",
      link: "Thrifted Stuff"
   },
-          {
-    id: 5,
-    title: "Handmade Rings ⋆⭒˚.⋆",
-    imageUrl:"https://pbs.twimg.com/media/G0-2-ZpWYAA6ss4?format=png&name=small",
-     link: "Handmade Rings"
-  },
+
         
-                     {
-    id: 5,
-    title: "Stainless Steel ⋆⭒˚.⋆",
-    imageUrl:"https://pbs.twimg.com/media/G0-3BTLXYAAHD1C?format=png&name=small",
-     link: "Stainless Steel"
-  },
+
                     {
     id: 5,
     title: "Pouches ⋆⭒˚.⋆",
