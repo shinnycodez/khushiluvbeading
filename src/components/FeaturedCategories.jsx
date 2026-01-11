@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 const categories = [
         {
     id: 2,
-    title: "Glass Beaded Bracelet ˚⋆𐙚｡",
-    imageUrl: "https://pbs.twimg.com/media/G0-2GpqXUAAC5im?format=png&name=small",
-      link: "Glass Beaded Bracelet"
+    title: "More Bracelets ˚⋆𐙚｡",
+    imageUrl: "https://pbs.twimg.com/media/G-YYD6JbsAAwauq?format=jpg&name=large",
+      link: "More Braceletst"
   },
               {
     id: 5,
@@ -17,7 +17,7 @@ const categories = [
               {
     id: 6,
     title: "Phone Charms ⋆⭒˚.⋆",
-    imageUrl:"https://pbs.twimg.com/media/G0-04_WWkAAMlI7?format=png&name=small",
+    imageUrl:"https://pbs.twimg.com/media/G-YYPzhbkAAMcTN?format=jpg&name=large",
      link: "Phone Charms"
   },
     {
@@ -29,26 +29,43 @@ const categories = [
   {
     id: 1,
     title: "Earrings ⋆｡𖦹°",
-    imageUrl: "https://pbs.twimg.com/media/G0-07i8XkAAX8Hv?format=png&name=small",
+    imageUrl: "https://pbs.twimg.com/media/G-YZgyAa8AAQOnN?format=jpg&name=small",
       link: "Earrings",
   },
-
+          {
+    id: 1,
+    title: "Stainless Steel Earrings ⋆｡𖦹°",
+    imageUrl: "https://pbs.twimg.com/media/G-YZmeybYAEMaP7?format=jpg&name=small",
+      link: "Stainless Steel Earrings",
+  },
+          {
+    id: 1,
+    title: "Stainless Steel Rings ⋆｡𖦹°",
+    imageUrl: "https://pbs.twimg.com/media/G-YZigtbwAAtolt?format=jpg&name=small",
+      link: "Stainless Steel Rings",
+  },
       {
     id: 5,
     title: "Keychains ｡°✩",
-    imageUrl:"https://pbs.twimg.com/media/G0-29WqX0AACXoT?format=png&name=small",
+    imageUrl:"https://pbs.twimg.com/media/G-YYMKxaAAAkgl9?format=jpg&name=large",
      link: "Keychains"
   },
         {
     id: 5,
     title: "Necklaces ⋆⭒˚.⋆",
-    imageUrl:"https://pbs.twimg.com/media/G0-2EG-WkAACz0v?format=png&name=small",
+    imageUrl:"https://pbs.twimg.com/media/G-YZahLaEAAyvaO?format=jpg&name=small",
      link: "Necklaces"
+  },
+                {
+    id: 5,
+    title: "Stainless Stell Necklaces ⋆⭒˚.⋆",
+    imageUrl:"https://pbs.twimg.com/media/G-YazezaYAAJIi0?format=jpg&name=small",
+     link: "Stainless Stell Necklaces"
   },
         {
     id: 5,
     title: "Bracelets ⋆⭒˚.⋆",
-    imageUrl:"https://pbs.twimg.com/media/G0-037vW0AATSqE?format=png&name=small",
+    imageUrl:"https://pbs.twimg.com/media/G-YYBNTbwAAupmb?format=jpg&name=large",
      link: "Bracelets"
   },
           {
@@ -83,6 +100,37 @@ const categories = [
     imageUrl:"https://pbs.twimg.com/media/G0-2-ZpWYAA6ss4?format=png&name=small",
      link: "Rings"
   },
+  {
+    id: 5,
+    title: "Handmade Rings ⋆⭒˚.⋆",
+    imageUrl:"https://pbs.twimg.com/media/G0-2-ZpWYAA6ss4?format=png&name=small",
+     link: "Handmade Rings"
+  },
+          {
+    id: 5,
+    title: "Stainless Steel Anklet ⋆⭒˚.⋆",
+    imageUrl:"https://pbs.twimg.com/media/G-YcRhXa8AASFgB?format=jpg&name=small",
+     link: "Stainless Steel Anklet"
+  },
+                  {
+    id: 5,
+    title: "Stainless Steel Bracelet ⋆⭒˚.⋆",
+    imageUrl:"https://pbs.twimg.com/media/G-YcfNraAAA7NMb?format=png&name=small",
+     link: "Stainless Steel Bracelet"
+  },
+    {
+    id: 5,
+    title: "Stainless Steel Handcuffs ⋆⭒˚.⋆",
+    imageUrl:"https://pbs.twimg.com/media/G-YchUlbsAAqeKc?format=png&name=900x900",
+     link: "Stainless Steel Handcuffs"
+  },
+            {
+    id: 5,
+    title: "Thrifted Stuff ⋆⭒˚.⋆",
+    imageUrl:"https://pbs.twimg.com/media/G-YcjGLbgAAH76_?format=jpg&name=large",
+     link: "Thrifted Stuff"
+  },
+        
                      {
     id: 5,
     title: "Stainless Steel ⋆⭒˚.⋆",
@@ -92,8 +140,14 @@ const categories = [
                     {
     id: 5,
     title: "Pouches ⋆⭒˚.⋆",
-    imageUrl:"https://pbs.twimg.com/media/G0-2_qiWAAA_C2X?format=png&name=small",
+    imageUrl:"https://pbs.twimg.com/media/G-YaxjbaoAA9cPO?format=png&name=small",
      link: "Pouches"
+  },
+                            {
+    id: 5,
+    title: "Plushies ⋆⭒˚.⋆",
+    imageUrl:"https://pbs.twimg.com/media/G-YbLBqaUAAaLlj?format=png&name=small",
+     link: "Plushies"
   },
 ];
 
